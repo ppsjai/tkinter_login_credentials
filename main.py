@@ -29,23 +29,23 @@ def generate_password():
 
 #TODO -------------------------------------SAVE PASSWORD -------------------------------------------------------------------------------------- #
 def save():
-    website = website_entry.get()
+    domain = website_entry.get()
     email = email_entry.get()
     password = password_entry.get() # it will open a pop up UI
 
-    if len(website) == 0 or len(password) == 0:
+    if len(domain) == 0 or len(password) == 0:
         messagebox.showinfo(title="OOPS", message="Please make sure you haven't left any field empty.")
     else:
-        is_ok = messagebox.askokcancel(title=website, message="These are the details entered:"
+        is_ok = messagebox.askokcancel(title=domain, message="These are the details entered:"
                                                       f" \nEmail: {email} \nPassword: {password} \nIs it ok to save")
         if is_ok:
             with open("login_report.txt", "a") as file:
-                file.write(f"|{website} | {email} | {password}\n")
-                website_entry.delete(0, END)
+                file.write(f"|{domain} | {email} | {password}\n")
+                domain_entry.delete(0, END)
                 password_entry.delete(0, END)
             # now open UI and provide our credentials it will be described in our file.
-            # to use delete key there are 2 types. first it start of the range and
-            # last it use END key optional end of the range.
+            # to use delete key there are 2 types. first it start of the range 0 and
+            # last we can use it as a key like END but it's optional end of the range.
 
 #TODO ------------------------------------------- UI SETUP ------------------------------------------------------------------------------------ #
 
@@ -59,17 +59,17 @@ canvas.create_image(100, 100, image=logo_img)
 canvas.grid(row=0, column=1)
 
 # label
-website_label = Label(text="Website:")
-website_label.grid(row=1, column=0)
+domain_label = Label(text="Domain name:")
+domain_label.grid(row=1, column=0)
 email_label = Label(text="Email/Username:")
 email_label.grid(row=2, column=0)
 password_label = Label(text="Password:")
 password_label.grid(row=3, column=0)
 
 #Entries
-website_entry = Entry(width=35)
-website_entry.grid(row=1, column=1, columnspan=2)
-website_entry.focus() # focus the cursor into entry box
+domain_entry = Entry(width=35)
+domain_entry.grid(row=1, column=1, columnspan=2)
+domain_entry.focus() # focus the cursor into entry box
 email_entry = Entry(width=35)
 email_entry.grid(row=2, column=1, columnspan=2)
 email_entry.insert(0, "jaikumarvijay1998@gmail.com") # if we run our UI it will already inserted by my email
