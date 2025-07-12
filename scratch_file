@@ -1,0 +1,15 @@
+# it contains an info how some keyword's are working create in a seprate file and make changes practice it
+from tkinter import *
+
+window = Tk()
+
+r = Label(bg="red", width=20, height=5)
+r.grid(row=0, column=0)
+
+g = Label(bg="green", width=20, height=5)
+g.grid(row=1, column=1)
+
+b = Label(bg="blue", width=40, height=5) # increasing width to 40
+b.grid(row=2, column=0, columnspan=2) # columnspan it increase the size of column span
+
+window.mainloop()
