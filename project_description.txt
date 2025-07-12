@@ -1,0 +1,54 @@
+project_description each i have given how do we do by step by step
+grit columnspan is only for practice
+TODO-------------------------------------------------------------------------------------------------------------
+TASK-1              width - 200
+          -------------------------------
+padding 20|                             |
+----------|                             |
+          |    IMAGE WAS HERE           |height - 200
+          |                             |
+          |                             |
+          |                             |
+          |                             |
+          -------------------------------
+data.geometry("1000x1000") increase the size of the screen
+TODO-------------------------------------------------------------------------------------------------------------
+grid columnspan how de we apply
+        0         1         2           3
+TODO|---------|---------|----------|----------|
+  0 | label   |         |new-button|          |
+    |---------|---------|----------|----------|
+  1 |         | button  |          |          |
+    |---------|---------|----------|----------|
+  2 |         |         |          | entry    |
+    |---------|---------|----------|----------| like this we have to create widgets in grid
+label.grid(0,0)
+button.grid(1,1)
+new_button.grid(0,2)
+entry.grid(2,3)
+
+website box width is 35 (1,1)
+password box width is 35 (2,1)
+add box width is 36 (3,1)
+                column
+        0         1         2
+    |---------|---------|-----------------|
+  0 |         | logo    |                 |
+    |         | appear  |                 |
+    |         |  here   |                 |
+    |---------|---------|-----------------|
+  1 | website |         |                 |
+    |---------|---------|-----------------|
+  2 | email/  |         |                 |
+row |Username |         |                 |
+    |---------|---------|-----------------|
+  3 |password |         |generate-password|
+    |---------|---------|----------|------|
+  4 |         |   login |          |      |
+    |---------|---------|----------|------|
+    website(1,0)
+    email/username(2,0)
+    password(3,0)
+    generate-password(3,2)
+    login(4,1)
+TODO-------------------------------------------------------------------------------------------------------------
